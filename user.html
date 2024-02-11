@@ -31,8 +31,8 @@
 
         <div class = "section" id = "section1">
             <h3>Was the robot in our alliance?</h3>
-            <button class = "general-button" id = "allianceinputno" onclick = "highlightButton('section1', this); inAlliance()">No</button>
-            <button class = "general-button" id = "allianceinputyes" onclick = "highlightButton('section1', this)">Yes</button>
+            <button class = "general-button" id = "allianceno" onclick = "highlightButton('section1', this); inAlliance(this.id)">No</button>
+            <button class = "general-button" id = "allianceyes" onclick = "highlightButton('section1', this); inAlliance(this.id)">Yes</button>
         </div>
         
         <br>
@@ -41,9 +41,9 @@
 
         <div class = "section" id = "section2">
             <h3>Where in the Community did the robot start?</h3>
-            <button class = "general-button" id = "wherecommunityleft" onclick = "highlightButton('section2', this)">Left</button>
-            <button class = "general-button" id = "wherecommunitymiddle" onclick = "highlightButton('section2', this)">Middle</button>
-            <button class = "general-button" id = "wherecommunityright" onclick = "highlightButton('section2', this)">Right</button>
+            <button class = "general-button" id = "wherecommunityleft" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Left</button>
+            <button class = "general-button" id = "wherecommunitymiddle" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Middle</button>
+            <button class = "general-button" id = "wherecommunityright" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Right</button>
         </div>
 
         <br>

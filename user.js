@@ -22,7 +22,7 @@ function leftCommunity(element){
 
 function inAlliance(element){
     if (element.includes("yes")){inAllianceString = "Yes"}
-    else{inAllianceString = "no"}
+    else{inAllianceString = "No"}
 }
 
 function whereInCommunity(element){
