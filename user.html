@@ -17,22 +17,22 @@
 
         <div>
             <h3>Team Number</h3>
-            <input class = "input-button">
+            <input class = "input-button" id = "teaminput">
         </div>
 
         <br>
 
         <div>
             <h3>Match Number</h3>
-            <input class = "input-button">
+            <input class = "input-button" id = "matchinput">
         </div>
 
         <br>
 
         <div class = "section" id = "section1">
             <h3>Was the robot in our alliance?</h3>
-            <button class = "general-button" id = "alliance" onclick = "highlightButton('section1', this)">No</button>
-            <button class = "general-button" id = "alliance" onclick = "highlightButton('section1', this)">Yes</button>
+            <button class = "general-button" id = "allianceinput" onclick = "highlightButton('section1', this)">No</button>
+            <button class = "general-button" id = "allianceinput" onclick = "highlightButton('section1', this)">Yes</button>
         </div>
         
         <br>
@@ -41,17 +41,17 @@
 
         <div class = "section" id = "section2">
             <h3>Where in the Community did the robot start?</h3>
-            <button class = "general-button" onclick = "highlightButton('section2', this)">Left</button>
-            <button class = "general-button" onclick = "highlightButton('section2', this)">Middle</button>
-            <button class = "general-button" onclick = "highlightButton('section2', this)">Right</button>
+            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Left</button>
+            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Middle</button>
+            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Right</button>
         </div>
 
         <br>
 
         <div class = "section" id = "section3">
             <h3>Did the robot leave the community zone?</h3>
-            <button class = "general-button" id = "leftCommunityNo" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
-            <button class = "general-button" id = "leftCommunityYes" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
+            <button class = "general-button" id = "leftcommunitynoinput" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
+            <button class = "general-button" id = "leftcommunityyesinput" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
         </div>
 
         <br>
@@ -76,7 +76,7 @@
 
         <div>
             <h2>Total Auto Score</h2>
-            <div id = "totalAutoScore">0</div>
+            <div id = "totalautoscoreinput">0</div>
         </div>
 
         <div>
@@ -100,7 +100,15 @@
 
         <div>
             <h3>Do you have any comments on the robot's performance? Include more general comments at the end!</h3>
-           <input class = "comment-input">
+           <input class = "comment-input" id = "commentinput">
         </div>
+
+        <br>
+
+        <div>
+            <button class = "submit-button" onclick = "generateQRCode()">Submit Form</button>
+        </div>
+
+        <div class="qrcode" id="qrcode"></div>
 
     </body>
