@@ -55,6 +55,7 @@ function createTable() {
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[1]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
@@ -63,6 +64,7 @@ function createTable() {
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[8]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[9]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[10]+ `</td>
+
 
 
         </tr>
