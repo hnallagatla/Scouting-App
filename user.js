@@ -42,7 +42,7 @@ function highlightButton(sectionId, button) {
 function getInputValue(element) {
     if (element === "alliance" || element === "wherecommunity" || element === "leftcommunityno" || element === "leftcommunityyes") {
         var selectedButton = highlightedButtons[element];
-        return selectedButton ? selectedButton.innerText : "";
+        return selectedButton ? selectedButton.innerText : "hello";
     } else {return document.getElementById(element + "input").value;}
 }
 
