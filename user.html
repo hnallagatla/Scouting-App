@@ -31,8 +31,8 @@
 
         <div class = "section" id = "section1">
             <h3>Was the robot in our alliance?</h3>
-            <button class = "general-button" id = "allianceinput" onclick = "highlightButton('section1', this)">No</button>
-            <button class = "general-button" id = "allianceinput" onclick = "highlightButton('section1', this)">Yes</button>
+            <button class = "general-button" id = "allianceinputno" onclick = "highlightButton('section1', this); inAlliance()">No</button>
+            <button class = "general-button" id = "allianceinputyes" onclick = "highlightButton('section1', this)">Yes</button>
         </div>
         
         <br>
@@ -41,17 +41,17 @@
 
         <div class = "section" id = "section2">
             <h3>Where in the Community did the robot start?</h3>
-            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Left</button>
-            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Middle</button>
-            <button class = "general-button" id = "wherecommunity" onclick = "highlightButton('section2', this)">Right</button>
+            <button class = "general-button" id = "wherecommunityleft" onclick = "highlightButton('section2', this)">Left</button>
+            <button class = "general-button" id = "wherecommunitymiddle" onclick = "highlightButton('section2', this)">Middle</button>
+            <button class = "general-button" id = "wherecommunityright" onclick = "highlightButton('section2', this)">Right</button>
         </div>
 
         <br>
 
         <div class = "section" id = "section3">
             <h3>Did the robot leave the community zone?</h3>
-            <button class = "general-button" id = "leftcommunitynoinput" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
-            <button class = "general-button" id = "leftcommunityyesinput" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
+            <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
+            <button class = "general-button" id = "leftcommunityyes" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
         </div>
 
         <br>
@@ -76,7 +76,7 @@
 
         <div>
             <h2>Total Auto Score</h2>
-            <div id = "totalautoscoreinput">0</div>
+            <div id = "totalAutoScore">0</div>
         </div>
 
         <div>

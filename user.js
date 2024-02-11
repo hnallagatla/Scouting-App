@@ -1,14 +1,34 @@
 var autoScore = 0;  
-var communityPoints = 0;
+var leftCommunityPoints = 0;
+var leftCommunityString = "";
+var inAllianceString = "";
+var whereInCommunityString = "";
 var highlightedButtons = {};
-const questions = ["team", "match", "alliance", "wherecommunity", "leftcommunityno", "leftcommunityyes", "speaker", "amp", "totalautoscore", "ranking", "work", "comment"]
+
+const questions = ["team", "match", "speaker", "amp", "ranking", "work", "comment"]
 
 
 function leftCommunity(element){
-    if (element.substring(13,16) === "yes") {communityPoints = 2;} 
-    else{ communityPoints =0;}
-
+    if (element.includes("yes")) {
+        communityPoints = 2;
+        leftCommunityString  = "Yes";
+    } 
+    else{ 
+        communityPoints =0;
+        leftCommunityString = "No"
+    }
    updateTotalScore();
+}
+
+function inAlliance(element){
+    if (element.includes("yes")){inAllianceString = "Yes"}
+    else{inAllianceString = "no"}
+}
+
+function whereInCommunity(element){
+    if (element.includes("left")){whereInCommunityString = "Left"}
+    else if (element.includes("middle")){whereInCommunityString = "Middle"}
+    else{whereInCommunityString = "Right"}
 }
 
 function addition(element) {
@@ -26,7 +46,7 @@ function updateTotalScore() {
     var ampScore = parseInt(document.getElementById("ampinput").value) * 2;
 
     autoScore = speakerScore + ampScore + communityPoints;
-    document.getElementById("totalautoscoreinput").innerText = autoScore;
+    document.getElementById("totalAutoScore").innerText = autoScore;
 }
 
 function highlightButton(sectionId, button) {
@@ -40,18 +60,21 @@ function highlightButton(sectionId, button) {
 }
 
 function getInputValue(element) {
-    if (element === "alliance" || element === "wherecommunity" || element === "leftcommunityno" || element === "leftcommunityyes") {
-        var selectedButton = highlightedButtons[element];
-        return selectedButton ? selectedButton.innerText : "hello";
-    } else {return document.getElementById(element + "input").value;}
+    var inputVal = document.getElementById(element + "input").value;
+    return inputVal;
 }
 
 
 function generateQRCode() {
     let qrCodeString = "";
-    for (i = 0; i < questions.length; i++) {
-        qrCodeString += getInputValue(questions[i]) + "|";
-    }
+    for (i = 0; i < questions.length; i++) {qrCodeString += getInputValue(questions[i]) + "|";}
+
+    var qrArray = qrCodeString.split("|");
+    qrArray[2] = inAllianceString;
+    qrArray[3] = whereInCommunityString;
+    qrArray[4] = leftCommunityString;
+
+    qrCodeString = qrArray.join("|")
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
