@@ -1,0 +1,70 @@
+.num-button{
+    height: 40px;
+    width : 40px;
+    text-align: center;
+	font-size: 26px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inine-block;
+	vertical-align: middle;
+}
+
+.general-button{
+    height: 40px;
+    width : 75px;
+    text-align: center;
+	font-size: 18px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inine-block;
+	vertical-align: middle;
+}
+
+.input-button{
+    height: 40px;
+    width : 100px;
+    text-align: center;
+	font-size: 26px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+input{
+    height: 40px;
+    width : 40px;
+    text-align: center;
+	font-size: 26px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.comment-input{
+    height: 175px;
+    width : 300px;
+    text-align: left;
+	font-size: 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#totalAutoScore {
+    height: 40px;
+    width : 40px;
+    text-align: center;
+	font-size: 26px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.highlighted {
+    background-color: rgb(135, 135, 135); 
+    color: black; /* Change the text color as needed */
+}

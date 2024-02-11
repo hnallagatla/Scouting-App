@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Scout | Falcon Scout</title>
+        <link rel="stylesheet" href="user.css">
+        <script src="user.js"></script>
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    </head>
+    <body>
+        <h1>Falcon Scout</h1>
+        
+        <h2>General Information</h2>
+
+        <div>
+            <h3>Team Number</h3>
+            <input class = "input-button">
+        </div>
+
+        <br>
+
+        <div>
+            <h3>Match Number</h3>
+            <input class = "input-button">
+        </div>
+
+        <br>
+
+        <div class = "section" id = "section1">
+            <h3>Was the robot in our alliance?</h3>
+            <button class = "general-button" id = "alliance" onclick = "highlightButton('section1', this)">No</button>
+            <button class = "general-button" id = "alliance" onclick = "highlightButton('section1', this)">Yes</button>
+        </div>
+        
+        <br>
+        
+        <h2>Autonomous Period</h2>
+
+        <div class = "section" id = "section2">
+            <h3>Where in the Community did the robot start?</h3>
+            <button class = "general-button" onclick = "highlightButton('section2', this)">Left</button>
+            <button class = "general-button" onclick = "highlightButton('section2', this)">Middle</button>
+            <button class = "general-button" onclick = "highlightButton('section2', this)">Right</button>
+        </div>
+
+        <br>
+
+        <div class = "section" id = "section3">
+            <h3>Did the robot leave the community zone?</h3>
+            <button class = "general-button" id = "leftCommunityNo" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
+            <button class = "general-button" id = "leftCommunityYes" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
+        </div>
+
+        <br>
+
+        <div>
+            <h3>Number of notes scored in the speaker</h3>
+            <button class = "num-button" id = "speaker" onclick = "subtraction(this)">-</button>
+            <input id = "speakerinput" value = 0>
+            <button class = "num-button" id = "speaker" onclick="addition(this)">+</button>
+        </div>
+
+        <br>
+
+        <div>
+            <h3>Number of notes scored in the amp</h3>
+            <button class = "num-button" id = "amp" onclick = "subtraction(this)">-</button>
+            <input id = "ampinput" value = 0>
+            <button class = "num-button" id = "amp" onclick="addition(this)">+</button>
+        </div>
+
+        <br>
+
+        <div>
+            <h2>Total Auto Score</h2>
+            <div id = "totalAutoScore">0</div>
+        </div>
+
+        <div>
+            <h2>Overall ranking of robot's performance during auto (out of 10)</h2>
+            <button class = "num-button" id = "ranking" onclick = "subtraction(this)">-</button>
+            <input id = "rankinginput" value = 0>
+            <button class = "num-button" id = "ranking" onclick="addition(this)">+</button>
+        </div>
+
+        <br>
+
+        <div>
+            <h2>If the robot was in our alliance, how well did their auto work with our auto? Rank on scale of 10. If you have specific feedback, leave it in the comments box below</h2>
+            <button class = "num-button" id = "work" onclick = "subtraction(this)">-</button>
+            <input id = "workinput" value = 0>
+            <button class = "num-button" id = "work" onclick="addition(this)">+</button>
+        </div>
+
+
+        <br>
+
+        <div>
+            <h3>Do you have any comments on the robot's performance? Include more general comments at the end!</h3>
+           <input class = "comment-input">
+        </div>
+
+    </body>
