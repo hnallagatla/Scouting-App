@@ -70,11 +70,12 @@ function generateQRCode() {
     for (i = 0; i < questions.length; i++) {qrCodeString += getInputValue(questions[i]) + "|";}
 
     var qrArray = qrCodeString.split("|");
-    qrArray.splice(2, 0, inAllianceString)
-    qrArray.splice(3, 0, whereInCommunityString)
-    qrArray.splice(4, 0, leftCommunityString)
+    qrArray.splice(2, 0, inAllianceString);
+    qrArray.splice(3, 0, whereInCommunityString);
+    qrArray.splice(4, 0, leftCommunityString);
+    qrArray.splice(7,0,autoScore);
 
-    qrCodeString = qrArray.join("|")
+    qrCodeString = qrArray.join("|");
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
