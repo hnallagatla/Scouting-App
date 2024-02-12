@@ -10,8 +10,9 @@ const questions = ["team", "match", "speaker", "amp", "ranking", "work", "commen
 
 
 function leftCommunity(element){
-    communityPoints = element.includes("yes") === true ? 2:0;
+    leftCommunityPoints = element.includes("yes") === true ? 2:0;
     leftCommunityString = element.includes("yes") === true ? "Yes": "No";
+    updateTotalScore();
 }
 
 function inAlliance(element){inAllianceString = element.includes("yes") === true ? "Yes": "No";}
@@ -39,7 +40,7 @@ function updateTotalScore() {
     var speakerScore = parseInt(document.getElementById("speakerinput").value) * 5;
     var ampScore = parseInt(document.getElementById("ampinput").value) * 2;
 
-    autoScore = speakerScore + ampScore + communityPoints;
+    autoScore = speakerScore + ampScore + leftCommunityPoints;
     document.getElementById("totalAutoScore").innerText = autoScore;
 }
 
