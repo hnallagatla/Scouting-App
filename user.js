@@ -3,33 +3,27 @@ var leftCommunityPoints = 0;
 var leftCommunityString = "";
 var inAllianceString = "";
 var whereInCommunityString = "";
+var startWithNoteString = "";
 var highlightedButtons = {};
 
 const questions = ["team", "match", "speaker", "amp", "ranking", "work", "comment"]
 
 
 function leftCommunity(element){
-    if (element.includes("yes")) {
-        communityPoints = 2;
-        leftCommunityString  = "Yes";
-    } 
-    else{ 
-        communityPoints =0;
-        leftCommunityString = "No"
-    }
-   updateTotalScore();
+    communityPoints = element.includes("yes") === true ? 2:0;
+    leftCommunityString = element.includes("yes") === true ? "Yes": "No";
 }
 
-function inAlliance(element){
-    if (element.includes("yes")){inAllianceString = "Yes"}
-    else{inAllianceString = "No"}
-}
+function inAlliance(element){inAllianceString = element.includes("yes") === true ? "Yes": "No";}
+
+function startWithNote(element){startWithNoteString = element.includes("yes") === true ? "Yes": "No";}
 
 function whereInCommunity(element){
     if (element.includes("left")){whereInCommunityString = "Left"}
     else if (element.includes("middle")){whereInCommunityString = "Middle"}
     else{whereInCommunityString = "Right"}
 }
+
 
 function addition(element) {
     document.getElementById(element.id + "input").value = parseInt(document.getElementById(element.id + "input").value) + 1;
@@ -72,8 +66,9 @@ function generateQRCode() {
     var qrArray = qrCodeString.split("|");
     qrArray.splice(2, 0, inAllianceString);
     qrArray.splice(3, 0, whereInCommunityString);
-    qrArray.splice(4, 0, leftCommunityString);
-    qrArray.splice(7,0,autoScore);
+    qrArray.splice(4,0,startWithNoteString);
+    qrArray.splice(5, 0, leftCommunityString);
+    qrArray.splice(8,0,autoScore);
 
     qrCodeString = qrArray.join("|");
 

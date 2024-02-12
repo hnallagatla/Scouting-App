@@ -49,9 +49,17 @@
         <br>
 
         <div class = "section" id = "section3">
+            <h3>Did the robot start with a note?</h3>
+            <button class = "general-button" id = "startnoteno" onclick = "highlightButton('section3', this); startWithNote(this.id)">No</button>
+            <button class = "general-button" id = "startnoteyes" onclick = "highlightButton('section3', this); startWithNote(this.id)">Yes</button>
+        </div>
+
+        <br>
+
+        <div class = "section" id = "section4">
             <h3>Did the robot leave the community zone?</h3>
-            <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section3', this)">No</button>
-            <button class = "general-button" id = "leftcommunityyes" onclick = "leftCommunity(this.id);  highlightButton('section3', this)">Yes</button>
+            <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section4', this)">No</button>
+            <button class = "general-button" id = "leftcommunityyes" onclick = "leftCommunity(this.id);  highlightButton('section4', this)">Yes</button>
         </div>
 
         <br>
@@ -110,5 +118,7 @@
         </div>
 
         <div class="qrcode" id="qrcode"></div>
+
+        <a href = "teleop.html">Go to teleop</a>
 
     </body>
