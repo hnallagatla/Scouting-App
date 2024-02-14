@@ -52,12 +52,12 @@ function createTable() {
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[1]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[6]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[7]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
 
         </tr>
     </table>
@@ -65,12 +65,12 @@ function createTable() {
     <form method="POST" action="https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec">
         <input type="hidden" name="Team Number" value="`+ parseText()[0]+ `">
         <input type="hidden" name="Match Number" value="`+ parseText()[1]+ `">
-        <input type="hidden" name="In Our Alliance" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Left Community" value="`+ parseText()[3]+ `">
-        <input type="hidden" name="Notes in Speaker" value="`+ parseText()[4]+ `">
-        <input type="hidden" name="Notes in Amp" value="`+ parseText()[5]+ `">
-        <input type="hidden" name="Total Score" value="`+ parseText()[6]+ `">
-        <input type="hidden" name="Ranking" value="`+ parseText()[7]+ `">
+        <input type="hidden" name="In Our Alliance" value="`+ parseText()[5]+ `">
+        <input type="hidden" name="Left Community" value="`+ parseText()[6]+ `">
+        <input type="hidden" name="Notes in Speaker" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Notes in Amp" value="`+ parseText()[3]+ `">
+        <input type="hidden" name="Total Score" value="`+ parseText()[7]+ `">
+        <input type="hidden" name="Ranking" value="`+ parseText()[4]+ `">
 
         <button type="submit">Send to Spreadsheet</button>
     </form>

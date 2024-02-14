@@ -4,7 +4,9 @@ var leftCommunityString = "";
 var inAllianceString = "";
 var highlightedButtons = {};
 
-const questions = ["team", "match", inAllianceString, leftCommunityString, "speaker", "amp", autoScore, "ranking"]
+
+
+const questions = ["team", "match", "speaker", "amp", "ranking"];
 
 
 function leftCommunity(element){
@@ -35,11 +37,8 @@ function updateTotalScore() {
 
 function highlightButton(sectionId, button) {
     var currentHighlightedButton = highlightedButtons[sectionId];
-
     if (currentHighlightedButton) {currentHighlightedButton.classList.remove('highlighted');}
-
     button.classList.add('highlighted');
-
     highlightedButtons[sectionId] = button;
 }
 
@@ -50,10 +49,9 @@ function getInputValue(element) {
 
 function generateQRCode() {
     let qrCodeString = "";
-    for (i = 0; i < questions.length; i++) {
-        //if (questions[i] === "Yes" || "No"){qrCodeString += (questions[i] + "|");}
-        qrCodeString += getInputValue(questions[i]) + "|";
-    }
+    for (i = 0; i < questions.length; i++) {qrCodeString += getInputValue(questions[i]) + "|";}
+
+    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore;
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
