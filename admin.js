@@ -43,15 +43,11 @@ function createTable() {
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Team Number</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Match Number</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">In Our Alliance</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Where in Community</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Start with Note</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Left Community</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Speaker</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Amp</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Total Score</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Ranking</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Work with out Team</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Comments</th>
         </tr>
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
@@ -62,11 +58,6 @@ function createTable() {
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[6]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[7]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[8]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[9]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[10]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[11]+ `</td>
-
 
         </tr>
     </table>
@@ -75,16 +66,11 @@ function createTable() {
         <input type="hidden" name="Team Number" value="`+ parseText()[0]+ `">
         <input type="hidden" name="Match Number" value="`+ parseText()[1]+ `">
         <input type="hidden" name="In Our Alliance" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Where in Community" value="`+ parseText()[3]+ `">
-        <input type="hidden" name="Start with Note="`+ parseText()[4]+ `">
-        <input type="hidden" name="Left Community" value="`+ parseText()[5]+ `">
-        <input type="hidden" name="Notes in Speaker" value="`+ parseText()[6]+ `">
-        <input type="hidden" name="Notes in Amp" value="`+ parseText()[7]+ `">
-        <input type="hidden" name="Total Score" value="`+ parseText()[8]+ `">
-        <input type="hidden" name="Ranking" value="`+ parseText()[9]+ `">
-        <input type="hidden" name="Work with out Team" value="`+ parseText()[10]+ `">
-        <input type="hidden" name="Comments" value="`+ parseText()[11]+ `">
-
+        <input type="hidden" name="Left Community" value="`+ parseText()[3]+ `">
+        <input type="hidden" name="Notes in Speaker" value="`+ parseText()[4]+ `">
+        <input type="hidden" name="Notes in Amp" value="`+ parseText()[5]+ `">
+        <input type="hidden" name="Total Score" value="`+ parseText()[6]+ `">
+        <input type="hidden" name="Ranking" value="`+ parseText()[7]+ `">
 
         <button type="submit">Send to Spreadsheet</button>
     </form>

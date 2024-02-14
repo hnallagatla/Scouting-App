@@ -39,23 +39,6 @@
         
         <h2>Autonomous Period</h2>
 
-        <div class = "section" id = "section2">
-            <h3>Where in the Community did the robot start?</h3>
-            <button class = "general-button" id = "wherecommunityleft" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Left</button>
-            <button class = "general-button" id = "wherecommunitymiddle" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Middle</button>
-            <button class = "general-button" id = "wherecommunityright" onclick = "highlightButton('section2', this); whereInCommunity(this.id)">Right</button>
-        </div>
-
-        <br>
-
-        <div class = "section" id = "section3">
-            <h3>Did the robot start with a note?</h3>
-            <button class = "general-button" id = "startnoteno" onclick = "highlightButton('section3', this); startWithNote(this.id)">No</button>
-            <button class = "general-button" id = "startnoteyes" onclick = "highlightButton('section3', this); startWithNote(this.id)">Yes</button>
-        </div>
-
-        <br>
-
         <div class = "section" id = "section4">
             <h3>Did the robot leave the community zone?</h3>
             <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section4', this)">No</button>
@@ -92,23 +75,6 @@
             <button class = "num-button" id = "ranking" onclick = "subtraction(this)">-</button>
             <input id = "rankinginput" value = 0>
             <button class = "num-button" id = "ranking" onclick="addition(this)">+</button>
-        </div>
-
-        <br>
-
-        <div>
-            <h2>If the robot was in our alliance, how well did their auto work with our auto? Rank on scale of 10. If you have specific feedback, leave it in the comments box below</h2>
-            <button class = "num-button" id = "work" onclick = "subtraction(this)">-</button>
-            <input id = "workinput" value = 0>
-            <button class = "num-button" id = "work" onclick="addition(this)">+</button>
-        </div>
-
-
-        <br>
-
-        <div>
-            <h3>Do you have any comments on the robot's performance? Include more general comments at the end!</h3>
-           <input class = "comment-input" id = "commentinput">
         </div>
 
         <br>

@@ -42,17 +42,6 @@ input{
 	vertical-align: middle;
 }
 
-.comment-input{
-    height: 175px;
-    width : 300px;
-    text-align: left;
-	font-size: 15px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
 #totalAutoScore {
     height: 40px;
     width : 40px;
