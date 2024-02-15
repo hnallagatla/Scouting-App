@@ -36,7 +36,8 @@ function parseText() {
 function createTable() {
     // Redo with for loops
     // Create .env file to store API link
-    // sketchy af rn
+    //The index of the nums in lines 53-60 & 66-73 are not sequential. Did this to put values extracted from QR code is a specific order in table.
+    //Do not change the ordering as this will change how data is displayed for user and also how data is sent to the spreadsheet. 
     document.getElementById("myTable").innerHTML = `
     <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
         <tr>
