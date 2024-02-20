@@ -92,6 +92,20 @@ h1{
     margin: 30px;
 }
 
+.clear-button {
+    width: auto; 
+    height: auto; 
+    min-width: 250px; /* Set a maximum width if needed */
+    min-height: 100px;
+    background: url('clear.png');
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: none;
+    margin: 30px;
+}
+
 body {
 	/* Set your initial background color */
 	background-color: #edf2f4;

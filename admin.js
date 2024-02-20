@@ -44,30 +44,52 @@ function createTable() {
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Team Number</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Match Number</th>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">In Our Alliance</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Left Community</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Speaker</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Amp</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Total Score</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto Ranking</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Complete Throw</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Robot Parked</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Where On Chain</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">How Many Teams</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Score In Trap</th>
         </tr>
+
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[1]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[6]+ `</td>
+        </tr>
+
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Left Community</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Speaker</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Notes in Amp</th>
+        </tr>
+
+        <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[7]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
+        </tr>
+
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Total Score</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto Ranking</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Complete Throw</th>
+        </tr>
+        <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[8]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[9]+ `</td>
+        </tr>
+
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Robot Parked</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Where On Chain</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">How Many Teams</th>
+        </tr>
+        <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[10]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[11]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
+        </tr>
+
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Score In Trap</th>
+        </tr>
+        <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[12]+ `</td>
         </tr>
     </table>
