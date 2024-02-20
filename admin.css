@@ -45,8 +45,6 @@ button {
     padding: 10px 20px; 
     border: 1px solid #b2b2b2; 
     outline: none; 
-    background: url('send.png');
-    background-size: 100% 100%;
     border-radius: 0.25em; 
     color: white; 
     font-size: 15px; 
