@@ -4,9 +4,13 @@ var autoScore = 0;
 var leftCommunityPoints = 0;
 var leftCommunityString = "";
 var inAllianceString = "";
+var completethrowstring = "";
+var parkingstring =  "";
+var trapscorestring = "";
+var whereonchainstring = "";
 var highlightedButtons = {};
 
-const questions = ["team", "match", "speaker", "amp", "ranking"];
+const questions = ["team", "match", "speaker", "amp", "ranking", "hang"];
 
 //Get value of clicked buttons from html and assign similar values to variables - leftCommunity() and inAlliance()
 //The call to updateTotalScore() at the end of most of these methods is needed to calculate total auto score correctly
@@ -22,9 +26,16 @@ function leftCommunity(element){
 
 function inAlliance(element){inAllianceString = element.includes("yes") === true ? "Yes": "No";}
 
-function addition(element) {
-    document.getElementById(element.id + "input").value = parseInt(document.getElementById(element.id + "input").value) + 1;
-    updateTotalScore();
+function completeThrow(element) {completethrowstring = element.includes("yes") === true ? "Yes": "No";}
+
+function parking(element) {parkingstring = element.includes("yes") === true ? "Yes": "No";}
+
+function trapScore(element) {trapscorestring = element.includes("yes") === true ? "Yes": "No";}
+
+function whereOnChain(element) {
+    if (element.includes("left")) {whereonchainstring = "Left";}
+    else if (element.includes("right")) {whereonchainstring = "Right";}
+    else {whereonchainstring = "Didn't";}
 }
 
 function subtraction(element) {
@@ -32,9 +43,14 @@ function subtraction(element) {
     updateTotalScore();
 }
 
+function addition(element) {
+    document.getElementById(element.id + "input").value = parseInt(document.getElementById(element.id + "input").value) + 1;
+    updateTotalScore();
+}
+
 //Goes through questions array and sets all values back to zero. Calls updateTotalScore() to change total score field on website to 0. 
 function clearForm(){
-    for (i = 0; i < questions.length; i++) {document.getElementById(questions[i] + "input").value = 0;}
+    for (i = 0; i < questions.length; i++) document.getElementById(questions[i] + "input").value = 0;
     updateTotalScore();
 }
 
@@ -78,8 +94,10 @@ function generateQRCode() {
 
     //Using same QR Code logic of seperating all values with a pipe("|")
     //Concatenating values to qrCodeString var simiilar to how it is done in for loop
-    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore;
+    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore + "|" + completethrowstring + "|" + parkingstring + "|" + whereonchainstring + "|" + trapscorestring;
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
 }
+
+

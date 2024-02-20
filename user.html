@@ -11,81 +11,107 @@
         <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     </head>
     <body>
-        <h1>Falcon Scout</h1>
+        <br>
+        <h1 class = "section">Falcon Scout</h1>
         
-        <h2>General Information</h2>
+        <h2 class = "section">General Information</h2>
 
-        <div>
+        <div class = "section">
             <h3>Team Number</h3>
             <input class = "input-button" id = "teaminput">
         </div>
 
-        <br>
-
-        <div>
+        <div class = "section">
             <h3>Match Number</h3>
             <input class = "input-button" id = "matchinput">
         </div>
-
-        <br>
 
         <div class = "section" id = "section1">
             <h3>Was the robot in our alliance?</h3>
             <button class = "general-button" id = "allianceno" onclick = "highlightButton('section1', this); inAlliance(this.id)">No</button>
             <button class = "general-button" id = "allianceyes" onclick = "highlightButton('section1', this); inAlliance(this.id)">Yes</button>
         </div>
-        
-        <br>
-        
-        <h2>Autonomous Period</h2>
+                
+        <h2 class = "section">Autonomous Period</h2>
+
+        <div class = "section" id = "section2">
+            <h3>Did the robot leave the community zone?</h3>
+            <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section2', this)">No</button>
+            <button class = "general-button" id = "leftcommunityyes" onclick = "leftCommunity(this.id);  highlightButton('section2', this)">Yes</button>
+        </div>
+
+        <div class = "section">
+            <h3>Number of notes scored in the speaker</h3>
+            <button class = "input-subtraction-button" id = "speaker" onclick = "subtraction(this)"></button>
+            <input class = "num-input" id = "speakerinput" value = 0>
+            <button class = "input-addition-button" id = "speaker" onclick="addition(this)"></button>
+        </div>
+
+        <div class = "section">
+            <h3>Number of notes scored in the amp</h3>
+            <button class = "input-subtraction-button" id = "amp" onclick = "subtraction(this)"></button>
+            <input class = "num-input" id = "ampinput" value = 0>
+            <button class = "input-addition-button" id = "amp" onclick="addition(this)"></button>
+        </div>
+
+        <div class = "section">
+            <h2>Total Auto Score</h2>
+            <div  id= "totalAutoScore">0</div>
+        </div>
+
+        <div class = "section">
+            <h2>Overall ranking of robot's performance during auto (out of 10)</h2>
+            <button class = "input-subtraction-button" id = "ranking" onclick = "subtraction(this)"></button>
+            <input class = "num-input" id = "rankinginput" value = 0>
+            <button class = "input-addition-button" id = "ranking" onclick="addition(this)"></button>
+        </div>
+
+        <h2>Endgame</h2>
+        <div class = "section" id = "section3">
+            <h3>Did they complete the throw?</h3>
+            <button class = "general-button" id = "throwingno" onclick = "highlightButton('section3', this); completeThrow(this.id)">No</button>
+            <button class = "general-button" id = "throwingyes" onclick = "highlightButton('section3', this); completeThrow(this.id)">Yes</button>
+        </div>
+
+
+        <br/>
 
         <div class = "section" id = "section4">
-            <h3>Did the robot leave the community zone?</h3>
-            <button class = "general-button" id = "leftcommunityno" onclick = "leftCommunity(this.id); highlightButton('section4', this)">No</button>
-            <button class = "general-button" id = "leftcommunityyes" onclick = "leftCommunity(this.id);  highlightButton('section4', this)">Yes</button>
+            <h3>Did the robot park?</h3>
+            <button class = "general-button" id = "parkingno" onclick = "highlightButton('section4', this); parking(this.id)">No</button>
+            <button class = "general-button" id = "parkingyes" onclick = "highlightButton('section4', this); parking(this.id)">Yes</button>
         </div>
 
-        <br>
+        <br/>
 
-        <div>
-            <h3>Number of notes scored in the speaker</h3>
-            <button class = "num-button" id = "speaker" onclick = "subtraction(this)">-</button>
-            <input id = "speakerinput" value = 0>
-            <button class = "num-button" id = "speaker" onclick="addition(this)">+</button>
+        <div class="section" id="section5"> 
+            <h3>What side did they hang on?</h4>
+                <button class = "general-button" id = "hangleft" onclick = "highlightButton('section5', this); whereOnChain(this.id)">Left</button>
+                <button class = "general-button" id = "hangno" onclick = "highlightButton('section5', this); whereOnChain(this.id)">Didn't</button>
+                <button class = "general-button" id = "hangright" onclick = "highlightButton('section5', this); whereonchain(this.id)">Right</button>
+
+            <h3> How many teams did they hang with?</h5>
+            <button class="input-subtraction-button" id="hang" onclick="subtraction(this)"></button>
+            <input class = "num-input" id="hanginput" type="text" value="0"/>
+            <button class="input-addition-button" id="hang" onclick="addition(this)"></button>    
+        </div>
+            
+
+        <br/>
+
+        <div class = "section" id = "section6">
+            <h3>Did the robot score in the trap?</h3>
+            <button class = "general-button" id = "trapno" onclick = "highlightButton('section6', this); trapScore(this.id)">No</button>
+            <button class = "general-button" id = "trapyes" onclick = "highlightButton('section6', this); trapScore(this.id)">Yes</button>
         </div>
 
-        <br>
-
-        <div>
-            <h3>Number of notes scored in the amp</h3>
-            <button class = "num-button" id = "amp" onclick = "subtraction(this)">-</button>
-            <input id = "ampinput" value = 0>
-            <button class = "num-button" id = "amp" onclick="addition(this)">+</button>
+        <div class = "section">
+            <button class = "input-submit-button" onclick = "generateQRCode()"></button>
         </div>
 
-        <br>
+        <div class="qrcode section" id="qrcode"></div>
 
-        <div>
-            <h2>Total Auto Score</h2>
-            <div id = "totalAutoScore">0</div>
-        </div>
-
-        <div>
-            <h2>Overall ranking of robot's performance during auto (out of 10)</h2>
-            <button class = "num-button" id = "ranking" onclick = "subtraction(this)">-</button>
-            <input id = "rankinginput" value = 0>
-            <button class = "num-button" id = "ranking" onclick="addition(this)">+</button>
-        </div>
-
-        <br>
-
-        <div>
-            <button class = "end-button" onclick = "generateQRCode()">Submit Form</button>
-        </div>
-
-        <div class="qrcode" id="qrcode"></div>
-
-        <div>
+        <div class = "section">
             <button class = "end-button" onclick="clearForm(); unhighlightButtons()">Clear All Fields</button>
         </div>
 
