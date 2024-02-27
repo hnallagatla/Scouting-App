@@ -4,13 +4,14 @@ var autoScore = 0;
 var leftCommunityPoints = 0;
 var leftCommunityString = "";
 var inAllianceString = "";
+var coopertitionString = "";
 var completethrowstring = "";
 var parkingstring =  "";
 var trapscorestring = "";
 var whereonchainstring = "";
 var highlightedButtons = {};
 
-const questions = ["team", "match", "speaker", "amp", "ranking", "hang"];
+const questions = ["team", "match", "speaker", "amp", "ranking", "speaker2", "amp2", "speed", "hang"];
 
 //Get value of clicked buttons from html and assign similar values to variables - leftCommunity() and inAlliance()
 //The call to updateTotalScore() at the end of most of these methods is needed to calculate total auto score correctly
@@ -25,6 +26,8 @@ function leftCommunity(element){
 }
 
 function inAlliance(element){inAllianceString = element.includes("yes") === true ? "Yes": "No";}
+
+function coopertition(element) { coopertitionString = element.includes("yes") === true ? "Yes" : "No"; }
 
 function completeThrow(element) {completethrowstring = element.includes("yes") === true ? "Yes": "No";}
 
@@ -94,7 +97,7 @@ function generateQRCode() {
 
     //Using same QR Code logic of seperating all values with a pipe("|")
     //Concatenating values to qrCodeString var simiilar to how it is done in for loop
-    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore + "|" + completethrowstring + "|" + parkingstring + "|" + whereonchainstring + "|" + trapscorestring;
+    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore + "|" + coopertitionString + "|" + completethrowstring + "|" + parkingstring + "|" + whereonchainstring + "|" + trapscorestring;
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
