@@ -11,7 +11,7 @@ var trapscorestring = "";
 var whereonchainstring = "";
 var highlightedButtons = {};
 
-const questions = ["team", "match", "speaker", "amp", "ranking", "speaker2", "amp2", "speed", "hang"];
+const questions = ["team", "match", "speaker", "amp", "ranking", "speaker2", "amp2", "cycle", "hang"];
 
 //Get value of clicked buttons from html and assign similar values to variables - leftCommunity() and inAlliance()
 //The call to updateTotalScore() at the end of most of these methods is needed to calculate total auto score correctly
