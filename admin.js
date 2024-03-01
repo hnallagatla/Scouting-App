@@ -122,7 +122,7 @@ function createTable() {
         <input type="hidden" name="Where On Chain" value="`+ parseText()[15]+ `">
         <input type="hidden" name="How Many Teams" value="`+ parseText()[8]+ `">
         <input type="hidden" name="Score In Trap" value="`+ parseText()[16]+ `">
-        <input type="hidden" name="Speed Teleop" value="`+ parseText()[7]+ `">
+        <input type="hidden" name="Average Cycle Length" value="`+ parseText()[7]+ `">
         <input type="hidden" name="Ranking" value="`+ parseText()[4]+ `">
 
         <button type="submit">Send to Spreadsheet</button>
