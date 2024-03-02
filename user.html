@@ -93,7 +93,7 @@
     <br/>
 
     <div class = "section" id = "section5">
-        <h3>Did the robot park?</h3>
+        <h3>Did the robot park? (Stop inside the triangle near the stage)</h3>
         <button class = "general-button" id = "parkingno" onclick = "highlightButton('section5', this); parking(this.id)">No</button>
         <button class = "general-button" id = "parkingyes" onclick = "highlightButton('section5', this); parking(this.id)">Yes</button>
     </div>
@@ -103,8 +103,9 @@
     <div class="section" id="section6"> 
         <h3>What side of the chain did they hang on?</h4>
             <button class = "general-button" id = "hangleft" onclick = "highlightButton('section6', this); whereOnChain(this.id)">Left</button>
-            <button class = "general-button" id = "hangno" onclick = "highlightButton('section6', this); whereOnChain(this.id)">Didn't</button>
+            <button class = "general-button" id = "hangmiddle" onclick = "highlightButton('section6', this); whereOnChain(this.id)">Middle</button>
             <button class = "general-button" id = "hangright" onclick = "highlightButton('section6', this); whereOnChain(this.id)">Right</button>
+            <button class = "general-button" id = "hangno" onclick = "highlightButton('section6', this); whereOnChain(this.id)">Didn't</button>
 
         <h3> How many teams did they hang with on the chain?</h5>
         <button class="input-subtraction-button" id="hang" onclick="subtraction(this)"></button>

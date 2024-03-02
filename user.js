@@ -38,6 +38,7 @@ function trapScore(element) {trapscorestring = element.includes("yes") === true 
 function whereOnChain(element) {
     if (element.includes("left")) {whereonchainstring = "Left";}
     else if (element.includes("right")) {whereonchainstring = "Right";}
+    else if (element.includes("middle")) {whereonchainstring = "Middle";}
     else {whereonchainstring = "Didn't";}
 }
 
