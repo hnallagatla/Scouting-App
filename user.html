@@ -131,6 +131,14 @@
         <button class="input-addition-button" id="cycle" onclick="addition(this)"> </button>
     </div>
 
+    <div class = "section" id = "section8">
+        <h3>What was the playing style of the robot?</h3>
+        <button class = "general-button" id = "playingdefense" onclick = "highlightButton('section8', this); playingStyle(this.id)">Defense</button>
+        <button class = "general-button" id = "playingoffense" onclick = "highlightButton('section8', this); playingStyle(this.id)">Offense</button>
+        <button class = "general-button" id = "playingboth" onclick = "highlightButton('section8', this); playingStyle(this.id)">Both</button>
+        <button class = "general-button" id = "playingneither" onclick = "highlightButton('section8', this); playingStyle(this.id)">Neither</button>
+    </div>
+
     <div class = "section">
         <h2>Overall ranking of robot's performance out of 10</h2>
         <button class = "input-subtraction-button" id = "ranking" onclick = "subtraction(this)"></button>

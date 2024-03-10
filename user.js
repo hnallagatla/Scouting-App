@@ -9,6 +9,7 @@ var completethrowstring = "";
 var parkingstring =  "";
 var trapscorestring = "";
 var whereonchainstring = "";
+var playingStyleString = "";
 var highlightedButtons = {};
 
 const questions = ["team", "match", "speaker", "amp", "ranking", "speaker2", "amp2", "cycle", "hang"];
@@ -40,6 +41,13 @@ function whereOnChain(element) {
     else if (element.includes("right")) {whereonchainstring = "Right";}
     else if (element.includes("middle")) {whereonchainstring = "Middle";}
     else {whereonchainstring = "Didn't";}
+}
+
+function playingStyle(element){
+    if(element.includes("defense")) { playingStyleString = "Defensive";}
+    else if (element.includes("offense")) {playingStyleString = "Offensive";}
+    else if (element.includes("both")) {playingStyleString = "Both";}
+    else {playingStyleString = "Neither";}
 }
 
 function subtraction(element) {
@@ -98,7 +106,7 @@ function generateQRCode() {
 
     //Using same QR Code logic of seperating all values with a pipe("|")
     //Concatenating values to qrCodeString var simiilar to how it is done in for loop
-    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore + "|" + coopertitionString + "|" + completethrowstring + "|" + parkingstring + "|" + whereonchainstring + "|" + trapscorestring;
+    qrCodeString += inAllianceString + "|" + leftCommunityString + "|" + autoScore + "|" + coopertitionString + "|" + completethrowstring + "|" + parkingstring + "|" + whereonchainstring + "|" + trapscorestring + "|" + playingStyleString;
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);

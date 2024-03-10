@@ -98,10 +98,12 @@ function createTable() {
         </tr>
         <tr>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Average Cycle Length</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto Ranking</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Playing Style</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Overall Ranking</th>
         </tr>
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[7]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[17]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
         </tr>
     </table>
@@ -123,6 +125,7 @@ function createTable() {
         <input type="hidden" name="How Many Teams" value="`+ parseText()[8]+ `">
         <input type="hidden" name="Score In Trap" value="`+ parseText()[16]+ `">
         <input type="hidden" name="Average Cycle Length" value="`+ parseText()[7]+ `">
+        <input type="hidden" name="Average Cycle Length" value="`+ parseText()[17]+ `">
         <input type="hidden" name="Ranking" value="`+ parseText()[4]+ `">
 
         <button type="submit">Send to Spreadsheet</button>
